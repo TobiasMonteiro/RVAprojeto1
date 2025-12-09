@@ -5,7 +5,7 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script>
     </head>
     <body style="margin: 0px; overflow: hidden">
-        <a-scene renderer="anisotropy: 8; foveationLevel: 1" stats="true" reflection="pointLight:a-light#light2" shadow="type: pcfsoft" physicallyCorrectLights="true" embedded arjs>
+        <a-scene renderer="anisotropy: 8; foveationLevel: 1; physicallyCorrectLights: true; colorManagement: true; logarithmicDepthBuffer: false" stats="true" reflection="pointLight:a-light#light2" shadow="type: pcfsoft" embedded arjs="debugUIEnabled: false; sourceType: webcam; trackingMethod: best; patternRatio: 0.9">
             <a-assets>
                 <img id="sunAbd" src="./assets/sun_abd.jpg">
                 <img id="earthAbd" src="./assets/earth_abd.jpg">
@@ -51,7 +51,7 @@
                 <a-entity id= "light4" light="color: #ffffff; intensity: 0.5; penumbra: 0.5; type: point" position="19 0 5"></a-entity>
                 <a-entity id= "ambientLight" light="color: #ffffff; intensity: 0.01; penumbra: 0.5; type: ambient" position="6.5 0 5"></a-entity>
 
-                <a-entity camera><a-entity>
+                <a-entity camera id="userCamera"></a-entity>
             </a-marker>
             
             

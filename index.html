@@ -34,7 +34,7 @@
 
             </a-assets>
             <a-text scale=".25 .25 .25" position="0 0 0" value=".">
-                <a-entity scale="2 2 2" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #sunAbd; shader: flat" id="sun" position="0 0 0" onclick="sunClick()"></a-entity>
+                <a-entity scale="2 2 2" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #sunAbd; shader: flat" id="sun" position="0 0 0" onclick="sunClick()" class="clickable"></a-entity>
                 <a-entity scale=".03 .03 .03" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #mercuryAbd; normalMap: #mercuryNrm; normalScale: 2 2" id="mercury" position="2.5 0 0" shadow="receive: true"></a-entity>
                 <a-entity scale=".09 .09 .09" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #earthAbd; roughnessMap: #earthRgh; normalMap: #earthNrm" id="earth" position="4.5 0 0" shadow="receive: true"></a-entity>
                 <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #marsAbd; normalMap: #marsNrm" id="mars" scale="0.045 0.045 0.045" position="5.5 0 0" shadow="receive: true"></a-entity>
@@ -58,7 +58,7 @@
             
 
             <!-- <a-entity camera id="userCamera" wasd-controls look-controls></a-entity> -->
-            <a-marker-camera type="pattern" url="./assets/pattern-marker.patt"></a-marker-camera>
+            <a-marker-camera type="pattern" url="./assets/pattern-marker.patt" raycaster="objects: .clickable" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5"></a-marker-camera>
         </a-scene>
     </body>
 </html>

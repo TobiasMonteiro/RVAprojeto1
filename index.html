@@ -10,9 +10,11 @@
                 let scene = document.querySelector("#scene")
                 scene.addEventListener("markerFound", (e) => {
                     isMarkerVisible = true;
+                    alert("found")
                 });
                 scene.addEventListener("markerLost", (e) => {
                     isMarkerVisible = false;
+                    alert("lost")
                 });
                 alert('a');
                 if (isMarkerVisible == true) {

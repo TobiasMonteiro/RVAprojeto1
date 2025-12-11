@@ -10,7 +10,7 @@
                 sun = document.querySelector("#sun");
                 sun.addEventListener("click", () => {
                     sunScale = sun.getAttribute("scale");
-                    alert(sunScale);
+                    alert(sun.getAttribute("class"));
                     if (sunScale == "2 2 2") {
                         sun.setAttribute("scale", "5 5 5")
                     } else {

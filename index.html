@@ -7,13 +7,12 @@
             let sunScale;
             function sunClick() {
                 sun = document.querySelector("#sun");
-                sunScale = sun.getAttribute("scale");
-                alert(sunScale);
                 sun.addEventListener("click", {
+                    sunScale: sun.getAttribute("scale"),
                     if (sunScale = "2 2 2") {
                         sun.setAttribute("scale", "5 5 5")
                     }, if (sunScale = "5 5 5") {
-                        this.setAttribute("scale", "2 2 2")
+                        sun.setAttribute("scale", "2 2 2")
                     }
                     
                 })

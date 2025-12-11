@@ -6,25 +6,27 @@
             let sun;
             let sunScale;
             window.onload = () => {
+                let scene = document.querySelector("a-scene")
+                scene.addEventListener("markerFound", (e) => {
+                    isMarkerVisible = true;
+                });
+                scene.addEventListener("markerLost", (e) => {
+                    isMarkerVisible = false;
+                });
                 alert('a');
-                sun = document.getElementById("sun");
-                sun.addEventListener("click", () => {
-                    sunScale = sun.getAttribute("scale");
-                    alert(sunScale);
-                    if (sunScale == "2 2 2") {
-                        sun.setAttribute("scale", "5 5 5")
-                    } else {
-                        sun.setAttribute("scale", "2 2 2")
-                    }
-                })
+                if (isMarkerVisible == true) {
+                    sun = document.querySelector("#sun");
+                    sun.addEventListener("click", () => {
+                        sunScale = sun.getAttribute("scale");
+                        alert(sunScale);
+                        if (sunScale == "2 2 2") {
+                            sun.setAttribute("scale", "5 5 5")
+                        } else {
+                            sun.setAttribute("scale", "2 2 2")
+                        }
+                    })
+                }
             }
-            let scene = document.querySelector("a-scene")
-            scene.addEventListener("markerFound", (e) => {
-                isMarkerVisible = true;
-            });
-            scene.addEventListener("markerLost", (e) => {
-                isMarkerVisible = false;
-            });
 
             function handleRotation(event) {
                 if (isMarkerVisible) {

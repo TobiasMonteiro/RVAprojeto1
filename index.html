@@ -7,11 +7,11 @@
             let sunScale;
             window.onload = () => {
                 AFRAME.registerComponent('registerevents', {
-		            init: function () {
-			            var marker = this.el;
+	                init: function () {
+			            let marker = this.el;
 
                         marker.addEventListener('markerFound', function() {
-                            var markerId = marker.id;
+                            let markerId = marker.id;
                             console.log('markerFound', markerId);
                             sun = document.querySelector("#sun");
                             sun.addEventListener("click", () => {

@@ -6,7 +6,8 @@
             let sun;
             let sunScale;
             window.onload = () => {
-                let scene = document.querySelector("a-scene")
+                let isMarkerVisible;
+                let scene = document.querySelector("#scene")
                 scene.addEventListener("markerFound", (e) => {
                     isMarkerVisible = true;
                 });
@@ -40,7 +41,7 @@
         </script>
     </head>
     <body style="margin: 0px; overflow: hidden">
-        <a-scene renderer="anisotropy: 8; foveationLevel: 1; physicallyCorrectLights: true; colorManagement: true; logarithmicDepthBuffer: false" stats="false" reflection="directionalLight:a-light#light2" embedded arjs="debugUIEnabled: false; sourceType: webcam; trackingMethod: best; patternRatio: 0.9" gesture-detector vr-mode-ui="enabled: false">
+        <a-scene id="scene" renderer="anisotropy: 8; foveationLevel: 1; physicallyCorrectLights: true; colorManagement: true; logarithmicDepthBuffer: false" stats="false" reflection="directionalLight:a-light#light2" embedded arjs="debugUIEnabled: false; sourceType: webcam; trackingMethod: best; patternRatio: 0.9" gesture-detector vr-mode-ui="enabled: false">
             <a-assets>
                 <img id="sunAbd" src="./assets/sun_abd.jpg">
                 <img id="earthAbd" src="./assets/earth_abd.jpg">

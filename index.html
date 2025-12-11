@@ -5,7 +5,7 @@
         <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script> -->
     </head>
     <body style="margin: 0px; overflow: hidden">
-        <a-scene renderer="anisotropy: 8; foveationLevel: 1; physicallyCorrectLights: true; colorManagement: true; logarithmicDepthBuffer: false" stats="false" reflection="directionalLight:a-light#light2" embedded arjs="debugUIEnabled: true; sourceType: webcam; trackingMethod: best; patternRatio: 0.9" scale="0.1 0.1 0.1">
+        <a-scene renderer="anisotropy: 8; foveationLevel: 1; physicallyCorrectLights: true; colorManagement: true; logarithmicDepthBuffer: false" stats="false" reflection="directionalLight:a-light#light2" embedded arjs="debugUIEnabled: true; sourceType: webcam; trackingMethod: best; patternRatio: 0.9">
             <a-assets>
                 <img id="sunAbd" src="./assets/sun_abd.jpg">
                 <img id="earthAbd" src="./assets/earth_abd.jpg">
@@ -27,28 +27,30 @@
                 <a-asset-item id="saturnRingModel" src="./assets/saturn_ring.gltf"></a-asset-item>
 
             </a-assets>
-            
-            <a-entity scale="3.5 3.5 3.5" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #sunAbd; shader: flat" id="sun" position="0 0 0">
-            </a-entity>
-            <a-entity scale=".03 .03 .03" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #mercuryAbd; normalMap: #mercuryNrm; normalScale: 2 2" id="mercury" position="4.59177 0 0" shadow="receive: true"></a-entity>
-            <a-entity scale=".09 .09 .09" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #earthAbd; roughnessMap: #earthRgh; normalMap: #earthNrm" id="earth" position="6.75496 0 0" shadow="receive: true"></a-entity>
-            <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #marsAbd; normalMap: #marsNrm" id="mars" scale="0.045 0.045 0.045" position="7.94863 0 0" shadow="receive: true"></a-entity>
-            <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #venusAbd; normalMap: #venusNrm" id="venus" scale="0.085 0.085 0.085" position="5.63631 0 0" shadow="receive: true">
-                <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #venusAtmAbd; transparent: true"></a-entity>
-            </a-entity>
-            <a-entity scale="1 1 1" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #jupiterAbd; normalMap: #jupiterNrm" id="jupiter" position="9.916 0 0" shadow="receive: true"></a-entity>
-            <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #saturnAbd" id="saturn" scale="0.9 0.9 0.9" position="12.90989 0 0" shadow="receive: true">
-                <a-entity gltf-model="#saturnRingModel" id="saturnRing" material="roughness: 1; src: #saturnRingAbd; transparent: true; side: double"></a-entity>
-            </a-entity>
-            <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #uranusAbd" id="uranus" scale="0.36 0.36 0.36" position="15.47663 0 0" shadow="receive: true"></a-entity>
-            <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #neptuneAbd" id="neptune" scale="0.35 0.35 0.35" position="17.65388 0 0" shadow="receive: true"></a-entity>
+            <a-entity scale="0.25 0.25 0.25">
+                <a-entity scale="3.5 3.5 3.5" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #sunAbd; shader: flat" id="sun" position="0 0 0">
+                </a-entity>
+                <a-entity scale=".03 .03 .03" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #mercuryAbd; normalMap: #mercuryNrm; normalScale: 2 2" id="mercury" position="4.59177 0 0" shadow="receive: true"></a-entity>
+                <a-entity scale=".09 .09 .09" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #earthAbd; roughnessMap: #earthRgh; normalMap: #earthNrm" id="earth" position="6.75496 0 0" shadow="receive: true"></a-entity>
+                <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #marsAbd; normalMap: #marsNrm" id="mars" scale="0.045 0.045 0.045" position="7.94863 0 0" shadow="receive: true"></a-entity>
+                <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #venusAbd; normalMap: #venusNrm" id="venus" scale="0.085 0.085 0.085" position="5.63631 0 0" shadow="receive: true">
+                    <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #venusAtmAbd; transparent: true"></a-entity>
+                </a-entity>
+                <a-entity scale="1 1 1" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #jupiterAbd; normalMap: #jupiterNrm" id="jupiter" position="9.916 0 0" shadow="receive: true"></a-entity>
+                <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #saturnAbd" id="saturn" scale="0.9 0.9 0.9" position="12.90989 0 0" shadow="receive: true">
+                    <a-entity gltf-model="#saturnRingModel" id="saturnRing" material="roughness: 1; src: #saturnRingAbd; transparent: true; side: double"></a-entity>
+                </a-entity>
+                <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #uranusAbd" id="uranus" scale="0.36 0.36 0.36" position="15.47663 0 0" shadow="receive: true"></a-entity>
+                <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #neptuneAbd" id="neptune" scale="0.35 0.35 0.35" position="17.65388 0 0" shadow="receive: true"></a-entity>
 
-            <!-- <a-entity id= "light1" light="color: #cdebfe; intensity: 1.5; penumbra: 0.52; type: directional" position="0 0 5"></a-entity> -->
-            <a-entity id= "light1" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="3 0 5"></a-entity>
-            <a-entity id= "light2" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="6.5 0 5"></a-entity>
-            <a-entity id= "light3" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="11 0 5"></a-entity>
-            <a-entity id= "light4" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="19 0 5"></a-entity>
-            <a-entity id= "ambientLight" light="color: #ffffff; intensity: 0.02; penumbra: 0.5; type: ambient" position="6.5 0 5"></a-entity>
+                <!-- <a-entity id= "light1" light="color: #cdebfe; intensity: 1.5; penumbra: 0.52; type: directional" position="0 0 5"></a-entity> -->
+                <a-entity id= "light1" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="3 0 5"></a-entity>
+                <a-entity id= "light2" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="6.5 0 5"></a-entity>
+                <a-entity id= "light3" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="11 0 5"></a-entity>
+                <a-entity id= "light4" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="19 0 5"></a-entity>
+                <a-entity id= "ambientLight" light="color: #ffffff; intensity: 0.02; penumbra: 0.5; type: ambient" position="6.5 0 5"></a-entity>
+            </a-entity>
+            
 
             <!-- <a-entity camera id="userCamera" wasd-controls look-controls></a-entity> -->
             <a-marker-camera type="pattern" url="./assets/pattern-marker.patt"></a-marker-camera>

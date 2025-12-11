@@ -5,6 +5,9 @@
         <script defer>
             let sun;
             let sunScale;
+            window.onload = () => {
+                alert('a'); sunClick()
+            }
             function sunClick() {
                 sun = document.querySelector("#sun");
                 sun.addEventListener("click", {
@@ -14,7 +17,6 @@
                     }, if (sunScale = "5 5 5") {
                         sun.setAttribute("scale", "2 2 2")
                     }
-                    
                 })
                 // if (sunScale = "5 5 5") {
                 //     sun.addEventListener("click", {
@@ -42,8 +44,8 @@
             }
         </script>
     </head>
-    <body style="margin: 0px; overflow: hidden" onload="alert('a'); sunClick()">
-        <a-scene renderer="anisotropy: 8; foveationLevel: 1; physicallyCorrectLights: true; colorManagement: true; logarithmicDepthBuffer: false" stats="false" reflection="directionalLight:a-light#light2" embedded arjs="debugUIEnabled: true; sourceType: webcam; trackingMethod: best; patternRatio: 0.9" gesture-detector>
+    <body style="margin: 0px; overflow: hidden">
+        <a-scene renderer="anisotropy: 8; foveationLevel: 1; physicallyCorrectLights: true; colorManagement: true; logarithmicDepthBuffer: false" stats="false" reflection="directionalLight:a-light#light2" embedded arjs="debugUIEnabled: false; sourceType: webcam; trackingMethod: best; patternRatio: 0.9" gesture-detector vr-mode-ui="enabled: false">
             <a-assets>
                 <img id="sunAbd" src="./assets/sun_abd.jpg">
                 <img id="earthAbd" src="./assets/earth_abd.jpg">

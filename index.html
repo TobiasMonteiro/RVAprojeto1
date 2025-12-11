@@ -7,9 +7,9 @@
             let sunScale;
             window.onload = () => {
                 alert('a');
-                sun = document.querySelector("#sun");
+                sun = document.getElementById("sun");
                 sun.addEventListener("click", () => {
-                    sunScale = sun.getAttribute("scale").value;
+                    sunScale = sun.getAttribute("scale");
                     alert(sunScale);
                     if (sunScale == "2 2 2") {
                         sun.setAttribute("scale", "5 5 5")

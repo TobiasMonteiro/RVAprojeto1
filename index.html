@@ -8,10 +8,12 @@
                 sun = document.querySelector("#sun");
                 
             }
+            let sunScale;
             function sunClick1() {
                 sun = document.querySelector("#sun");
                 sun.setAttribute("scale", "5 5 5")
-                if (sun.scale("5 5 5") == true) {
+                sunScale = sun.getAttribute("scale")
+                if (sunScale = "5 5 5") {
                     sun.addEventListener("click", {
                         this:setAttribute("scale", "2 2 2")
                     })

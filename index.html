@@ -8,6 +8,23 @@
                 sun = document.querySelector("#sun");
                 sun.setAttribute("scale", "5 5 5")
             }
+            let scene = document.querySelector("a-scene")
+            scene.addEventListener("markerFound", (e) => {
+                isMarkerVisible = true;
+            });
+            scene.addEventListener("markerLost", (e) => {
+                isMarkerVisible = false;
+            });
+
+            function handleRotation(event) {
+                if (isMarkerVisible) {
+                    el.object3D.rotation.y +=
+                    event.detail.positionChange.x * rotationFactor;
+
+                    el.object3D.rotation.x +=
+                    event.detail.positionChange.y * rotationFactor;
+                }
+            }
         </script>
     </head>
     <body style="margin: 0px; overflow: hidden">

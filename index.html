@@ -7,16 +7,21 @@
             let sunScale;
             function sunClick() {
                 sun = document.querySelector("#sun");
-                sun.addEventListener("click", {
-                    this:setAttribute("scale", "5 5 5")
-                })
                 sunScale = sun.getAttribute("scale")
-                if (sunScale = "5 5 5") {
-                    sun.addEventListener("click", {
-                        this:setAttribute("scale", "2 2 2")
-                    })
+                sun.addEventListener("click", {
+                    if (sunScale = "2 2 2") {
+                        sun.setAttribute("scale", "5 5 5")
+                    }, if (sunScale = "5 5 5") {
+                        this.setAttribute("scale", "2 2 2")
+                    }
                     
-                }
+                })
+                // if (sunScale = "5 5 5") {
+                //     sun.addEventListener("click", {
+                //         this:setAttribute("scale", "2 2 2")
+                //     })
+                    
+                // }
             }
             let scene = document.querySelector("a-scene")
             scene.addEventListener("markerFound", (e) => {

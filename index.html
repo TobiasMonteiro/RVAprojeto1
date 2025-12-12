@@ -47,7 +47,7 @@
                 <button id="btnNeptune" style="padding: 10px 15px; background: #4166F5; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; font-weight: bold;">Neptuno</button>
             </div>
 
-            
+            <a-text scale=".2 .2 .2" position="0 0 0" value=".">
                 <a-entity scale="2 2 2" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #sunAbd; shader: flat" id="sun" position="-7 0 0" class="clickable"></a-entity>
                 <a-entity scale=".03 .03 .03" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #mercuryAbd; normalMap: #mercuryNrm; normalScale: 2 2" id="mercury" position="-4.5 0 0" shadow="receive: true" class="clickable"></a-entity>
                 <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #venusAbd; normalMap: #venusNrm" id="venus" scale="0.085 0.085 0.085" position="-3.5 0 0" shadow="receive: true" class="clickable">
@@ -67,7 +67,7 @@
                 <a-entity id= "light3" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="11 0 5"></a-entity>
                 <a-entity id= "light4" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="19 0 5"></a-entity>
                 <a-entity id= "ambientLight" light="color: #ffffff; intensity: 0.02; penumbra: 0.5; type: ambient" position="6.5 0 5"></a-entity>
-            
+            </a-text>
 
             <a-marker-camera type="pattern" url="./assets/pattern-marker.patt" raycaster="objects: .clickable; far: 100; interval: 100" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" emitevents="true" cursor="fuse: false; rayOrigin: mouse; fuseTimeout: 0" smooth="true" smoothCount="3" smoothTolerance=".05" smoothThreshold="2" mouse-cursor>
                 <a-cursor id="cursor" raycaster="objects: .clickable" visible="false"></a-cursor>

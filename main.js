@@ -6,12 +6,10 @@ window.onload = () => {
     
     scene.addEventListener("markerFound", (e) => {
         isMarkerVisible = true;
-        alert("found");
     });
     
     scene.addEventListener("markerLost", (e) => {
         isMarkerVisible = false;
-        alert("lost");
     });
     
     // Configurar cliques quando a cena estiver pronta

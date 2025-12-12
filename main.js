@@ -69,10 +69,8 @@ window.onload = () => {
                 const clickedPlanet = document.querySelector(`#${planetId}`);
                 
                 if (clickedPlanet) {
-
                     playPlanetAudio(planet.audioPath);
                     
-
                     if (planetStates[planetId]) {
                         clickedPlanet.setAttribute("scale", planet.defaultScale);
                         planetStates[planetId] = false;

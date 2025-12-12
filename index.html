@@ -34,8 +34,19 @@
                 <audio id="saturnAudio" src="./assets/saturn.mp3" preload="auto"></audio>
                 <audio id="uranusAudio" src="./assets/uranus.mp3" preload="auto"></audio>
                 <audio id="neptuneAudio" src="./assets/neptune.mp3" preload="auto"></audio>
-
             </a-assets>
+
+            <div id="planetButtons" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; z-index: 1000; background: rgba(0, 0, 0, 0.7); padding: 15px; border-radius: 10px;">
+                <button id="btnMercury" style="padding: 10px 15px; background: #8C7853; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; font-weight: bold;">Mercúrio</button>
+                <button id="btnVenus" style="padding: 10px 15px; background: #FFC649; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; font-weight: bold;">Vénus</button>
+                <button id="btnEarth" style="padding: 10px 15px; background: #4A90E2; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; font-weight: bold;">Terra</button>
+                <button id="btnMars" style="padding: 10px 15px; background: #CD5C5C; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; font-weight: bold;">Marte</button>
+                <button id="btnJupiter" style="padding: 10px 15px; background: #D8CA9D; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; font-weight: bold;">Júpiter</button>
+                <button id="btnSaturn" style="padding: 10px 15px; background: #FAD5A5; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; font-weight: bold;">Saturno</button>
+                <button id="btnUranus" style="padding: 10px 15px; background: #4FD0E7; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; font-weight: bold;">Urano</button>
+                <button id="btnNeptune" style="padding: 10px 15px; background: #4166F5; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; font-weight: bold;">Neptuno</button>
+            </div>
+
             <a-text scale=".2 .2 .2" position="0 0 0" value=".">
                 <a-entity scale="2 2 2" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #sunAbd; shader: flat" id="sun" position="0 0 0" class="clickable"></a-entity>
                 <a-entity scale=".03 .03 .03" geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #mercuryAbd; normalMap: #mercuryNrm; normalScale: 2 2" id="mercury" position="2.5 0 0" shadow="receive: true" class="clickable"></a-entity>
@@ -51,7 +62,6 @@
                 <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #uranusAbd" id="uranus" scale="0.36 0.36 0.36" position="12 0 0" shadow="receive: true" class="clickable"></a-entity>
                 <a-entity geometry="primitive: sphere; segmentsHeight: 32; segmentsWidth: 64" material="roughness: 1; src: #neptuneAbd" id="neptune" scale="0.35 0.35 0.35" position="13.25 0 0" shadow="receive: true" class="clickable"></a-entity>
 
-                <!-- <a-entity id= "light1" light="color: #cdebfe; intensity: 1.5; penumbra: 0.52; type: directional" position="0 0 5"></a-entity> -->
                 <a-entity id= "light1" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="3 0 5"></a-entity>
                 <a-entity id= "light2" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="6.5 0 5"></a-entity>
                 <a-entity id= "light3" light="color: #ffffff; intensity: 2; penumbra: 0.5; type: point" position="11 0 5"></a-entity>

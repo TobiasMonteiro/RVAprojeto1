@@ -20,8 +20,8 @@ window.onload = () => {
             { id: "venus", defaultScale: "0.25 0.25 0.25", enlargedScale: "0.5 0.5 0.5", audioPath: "./assets/venus.mp3" },
             { id: "earth", defaultScale: "0.3 0.3 0.3", enlargedScale: "0.6 0.6 0.6", audioPath: "./assets/earth.mp3" },
             { id: "mars", defaultScale: "0.15 0.15 0.15", enlargedScale: "0.3 0.3 0.3", audioPath: "./assets/mars.mp3" },
-            { id: "jupiter", defaultScale: "1 1 1", enlargedScale: "2 2 2", audioPath: "./assets/jupiter.mp3" },
-            { id: "saturn", defaultScale: "0.9 0.9 0.9", enlargedScale: "1.8 1.8 1.8", audioPath: "./assets/saturn.mp3" },
+            { id: "jupiter", defaultScale: "1 1 1", enlargedScale: "1.4 1.4 1.4", audioPath: "./assets/jupiter.mp3" },
+            { id: "saturn", defaultScale: "0.9 0.9 0.9", enlargedScale: "1.3 1.3 1.3", audioPath: "./assets/saturn.mp3" },
             { id: "uranus", defaultScale: "0.36 0.36 0.36", enlargedScale: "0.72 0.72 0.72", audioPath: "./assets/uranus.mp3" },
             { id: "neptune", defaultScale: "0.35 0.35 0.35", enlargedScale: "0.7 0.7 0.7", audioPath: "./assets/neptune.mp3" }
         ];

@@ -115,7 +115,7 @@
 
             <!-- <a-entity camera id="userCamera" wasd-controls look-controls></a-entity> -->
             <a-marker-camera type="pattern" url="./assets/pattern-marker.patt" raycaster="objects: .clickable; far: 100; interval: 100" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" emitevents="true" cursor="fuse: false; rayOrigin: mouse; fuseTimeout: 0" smooth="true" smoothCount="3" smoothTolerance=".05" smoothThreshold="2" mouse-cursor>
-                <a-cursor id="cursor" raycaster="objects: .clickable" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: #4CC3D9; shader: flat" animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150" animation__fusing="property: scale; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500" event-set__mouseenter="_event: mouseenter; color: #4CC3D9" event-set__mouseleave="_event: mouseleave; color: #4CC3D9"></a-cursor>
+                <a-cursor id="cursor" raycaster="objects: .clickable" animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150" animation__fusing="property: scale; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500" event-set__mouseenter="_event: mouseenter; color: #4CC3D9" event-set__mouseleave="_event: mouseleave; color: #4CC3D9"></a-cursor>
             </a-marker-camera>
         </a-scene>
     </body>
